@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch",
-    "build": "webpack"
+    "build": "webpack",
+    "use:npmReadme": "mv 'README.md' 'npm.README.md' && mv 'npm.README.md' 'README.md' ",
+    "use:gitReadme": "mv 'README.md' 'npm.README.md' && mv 'git.README.md' 'README.md' ",
+    "prepublishOnly": "run-s build use:npmReadme",
+    "postpublish": "npm run use:gitReadme"
   },
   "keywords": [
     "leaflet",
