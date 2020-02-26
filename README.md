@@ -5,12 +5,16 @@
   <img src="images/banner.png" width="80%">
 </p>
 
+## Demo
+
+You can see an instance of react-leaflet-arrowheads in my [react-leaflet-custom-components](https://codesandbox.io/s/github/slutske22/react-leaflet-custom-components) sandbox (among other custom components for react-leaflet).
+
 ## Installation
 
 You can use npm to install react-leaflet-arrowheads:
 
 ````
-npm install -react-leaflet-arrowheads --save
+npm install react-leaflet-arrowheads --save
 ````
 
 ## Usage
@@ -29,7 +33,7 @@ Within your `<Map />` component, you can now use this new `Polyline` component. 
 
   <TileLayer ... />
 
-  <Polyline positions={ [coords array] } />
+  <Polyline positions={ [coords array] } arrowheads />
 
 </Map>
 ````
