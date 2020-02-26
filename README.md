@@ -1,8 +1,8 @@
-# leaflet-arrowheads
+# react-leaflet-arrowheads
  React-Leaflet-Arrowheads is a [react-leaflet](https://react-leaflet.js.org/) wrapper for leaflet-arrowheads.  [Leaflet-Arrowheads](https://github.com/slutske22/leaflet-arrowheads) is a small plugin for leaflet to quickly draw arrowheads on polylines for vector visualization.
 
 <p align="center">
-  <img src="images/banner.PNG" width="80%">
+  <img src="images/banner.png" width="80%">
 </p>
 
 ## Installation
@@ -13,41 +13,41 @@ You can use npm to install react-leaflet-arrowheads:
 npm install -react-leaflet-arrowheads --save
 ````
 
+## Usage
+
+
 Instead of importing `{ Polyline }` from `react-leaflet`, you'll import a modified `Polyline` from `react-leaflet-arrowheads`
 
 ````javascript
-import { Plyline } from 'react-leaflet-arrowheads'
+import { Polyline } from 'react-leaflet-arrowheads'
 ````
 
-## Usage
-
-Arrowheads can be applied to any polyline, whether unisegmental, multisegmental, continuous, or discontinuous:
+Within your `<Map />` component, you can now use this new `Polyline` component.  Using the `arrowheads` prop on this new `Polyline` component will apply arrowheads.
 
 ````javascript
-var myVector = L.polyline([ coords ]).arrowheads()
+<Map>
+
+  <TileLayer ... />
+
+  <Polyline positions={ [coords array] } />
+
+</Map>
 ````
 
-Arrowheads will be added to your polyline and will automatically be added to and removed from the map when you call add and remove methods on your polyline:
+And that's it!
+
+## Options
+
+Declaring a polyline with the `arrowheads` prop with no options object will give the default options:
 
 ````javascript
-myVector.addTo(map) or myVector.remove()
+<Polyline positions={ [coords array] } arrowheads />
 ````
 
-If you need to access the arrowheads directly, you can call the `.getArrowheads()` method on your polyline.
+The arrowheads prop can also take a configuration object as its value:
 
 ````javascript
-myVector.getArrowheads() // returns the arrowheads polyline object
-myVector.getArrowheads().remove() // removes arrowheads from map
+<Polyline positions={ [coords array] } arrowheads={ {size: '300m', frequency: '1000m'} } />
 ````
 
-Arrowheads can also be deleted from their parent polyline entirely:
-
-````javascript
-myVector.deleteArrowheads()
-````
-
-Arrowheads can take a configuration object as its argument:
-
-````javascript
-var myVector = L.polyline([ coords ]).arrowheads({ <Options> })
-````
+The options that are available are te same options inherited from leaflet-arrowheads.  [Click here](https://github.com/slutske22/leaflet-arrowheads#options) for a list of options and examples.
