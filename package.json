@@ -33,7 +33,7 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
-    "leaflet-arrowheads": "^1.0.11",
+    "leaflet-arrowheads": "^1.1.2",
     "webpack": "^4.41.5"
   },
   "peerDependencies": {
