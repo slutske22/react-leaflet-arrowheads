@@ -33,7 +33,7 @@ module.exports = {
 		},
 		'react-dom': 'commonjs react-dom',
 		'leaflet': {
-			commonks: 'leaflet',
+			commonjs: 'leaflet',
 			commonjs2: 'leaflet',
 			root: 'L'
 		},
