@@ -12,6 +12,12 @@ class ArrowheadsPolyline extends React.Component{
       }
    }
 
+   componentWillUnmount(){
+      if (this.props.arrowheads){
+         polyline.deleteArrowheads()
+      }
+   }
+
    render(){
       return(
          <Polyline {...this.props} ref={polylineRef => this.polylineRef = polylineRef} />
