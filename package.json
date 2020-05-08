@@ -1,6 +1,6 @@
 {
   "name": "react-leaflet-arrowheads",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A react-leaflet wrapper for leaflet-arrowheads",
   "main": "build/react-leaflet-arrowheads.js",
   "scripts": {
