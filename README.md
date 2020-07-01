@@ -23,7 +23,7 @@ npm install react-leaflet-arrowheads --save
 Instead of importing `{ Polyline }` from `react-leaflet`, you'll import a modified `Polyline` from `react-leaflet-arrowheads`
 
 ````javascript
-import { Polyline } from 'react-leaflet-arrowheads'
+import Polyline from 'react-leaflet-arrowheads'
 ````
 
 Within your `<Map />` component, you can now use this new `Polyline` component.  Using the `arrowheads` prop on this new `Polyline` component will apply arrowheads.
