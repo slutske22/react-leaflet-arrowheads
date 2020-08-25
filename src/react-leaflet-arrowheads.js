@@ -21,7 +21,9 @@ class ArrowheadsPolyline extends React.Component{
 
    render(){
       return(
-         <Polyline {...this.props} ref={polylineRef => this.polylineRef = polylineRef} />
+         <Polyline {...this.props} ref={polylineRef => this.polylineRef = polylineRef}>
+            {this.props.children}
+         </Polyline>
       )
    }
    
