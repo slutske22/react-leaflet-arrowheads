@@ -1,3 +1,7 @@
+# *----- Notice: Deprecated -----*
+
+As this plugin only supports react-leaflet v2, and react-leaflet is already up to v4, this repo and plugin are deprecated.  For a quick idea on how to integrate leaflet-arrowheads with react-leaflet v3+, see [this example](https://github.com/slutske22/react-leaflet-custom-components/blob/master/src/ArrowheadsPolyline.js).
+
 # react-leaflet-arrowheads
  React-Leaflet-Arrowheads is a [react-leaflet](https://react-leaflet.js.org/) wrapper for leaflet-arrowheads.  [Leaflet-Arrowheads](https://github.com/slutske22/leaflet-arrowheads) is a small plugin for leaflet to quickly draw arrowheads on polylines for vector visualization.
  
